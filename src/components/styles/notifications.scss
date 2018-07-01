@@ -1,0 +1,42 @@
+@import "./../../common/styles/unit";
+@import "./../../common/styles/font";
+
+.notifications-box{
+    width: 100%;
+    height: rem(90);
+
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    .speaker{
+        margin: rem(12) rem(24);
+        width: rem(66);
+        height: rem(66);
+        background-size: 100% 100%;
+    }
+
+    .scroll-content{
+        margin-right: rem(48);
+        height: 100%;
+        width: 100%;
+
+        .scroll-p-content{
+            height: rem(90);
+            width: 100%;
+            
+            font-size: rem(39);
+            line-height: rem(100);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+    
+            color: #434343;
+        }
+    
+        .scroll-p-content-ios{
+            @extend .scroll-p-content;
+            line-height: rem(90);
+        }
+    }
+}

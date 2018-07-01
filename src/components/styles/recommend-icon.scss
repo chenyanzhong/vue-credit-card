@@ -1,0 +1,92 @@
+@import "./../../common/styles/unit";
+@import "./../../common/styles/font";
+
+.rem-box{
+    height: rem(298);
+    width: 100%;
+    background-color: white;
+
+    @media only screen and (min-width: 0px) and (max-width: 320px) {
+        height: rem(270);
+    }
+
+    .rem-item-4{
+        width: 25%;
+        float: left;
+
+        .rem-img{
+            margin: 0 auto;
+            display: block;
+            width: rem(270);
+            height: rem(216);
+
+            background-size: 100% 100%;
+
+            @media only screen and (min-width: 0px) and (max-width: 320px) {
+                margin: rem(10) auto 0 auto;
+                width: rem(240);
+                height: rem(192);
+            }
+        }
+    
+        .rem-title{
+            width: 100%;
+    
+            font-size: rem(36);
+            text-align: center;
+            @include PingFangSC-Regular;
+
+    
+            color: #434343;      
+        }
+    }
+
+    .rem-item-1{
+        @extend .rem-item-4;
+        width: 100%;
+    }
+
+    .rem-item-2{
+        @extend .rem-item-4;
+        width: 50%;
+    }
+
+    .rem-item-3{
+        @extend .rem-item-4;
+        width: 33%;
+    }
+
+    .rem-item-5{
+        @extend .rem-item-4;
+        width: 20%;
+
+        .rem-img{
+            margin: rem(15) auto 0 auto;
+            display: block;
+            width: rem(240);
+            height: rem(192);
+
+            background-size: 100% 100%;
+
+            @media only screen and (min-width: 0px) and (max-width: 320px) {
+                margin: rem(10) auto 0 auto;
+                width: rem(210);
+                height: rem(168);
+            }
+            
+        }
+
+        .rem-title{
+            margin-top: rem(10);
+            width: 100%;
+    
+            font-size: rem(36);
+            text-align: center;
+            @include PingFangSC-Regular;
+
+    
+            color: #434343;      
+        }
+    }
+
+}

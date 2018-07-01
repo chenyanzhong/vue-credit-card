@@ -1,0 +1,273 @@
+@import "./../../common/styles/unit";
+@import "./../../common/styles/font";
+
+.list-bg{
+    background-color: white;
+}
+
+.list-top{
+    width: 100%;
+    height: rem(30);
+
+    background-color: #f5f6f7; 
+}
+
+.list-top-white{
+    width: 100%;
+    height: rem(48);
+
+    background-color: white; 
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+
+    transform:translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.card-title-box{
+    height: rem(150);
+    position: relative;
+    background-color: white;
+
+    .title{
+        @extend .center;
+        top: 53%;
+
+        left: rem(48);
+        @include PingFangSC-Semibold;
+        font-size: rem(48);
+        line-height: rem(48);
+        text-align: center;
+
+        color: #333333;    
+    }
+
+    .jump-text{
+        @extend .center;
+        top: 53%;
+
+        right: rem(84);
+        @include PingFangSC-Regular;
+        font-size: rem(39);
+        line-height: rem(39);
+        text-align: center;
+
+        color: #808080;       
+    }
+
+    .jump-symbol{
+        @extend .center;
+        top: 51%;
+
+        right: rem(48);
+        height: rem(72);
+        width: rem(72);
+        
+        background-size: 100% 100%;
+    }
+
+    .jump-symbol-ios{
+        @extend .center;
+        top: 53%;
+
+        right: rem(48);
+        height: rem(72);
+        width: rem(72);
+        
+        background-size: 100% 100%;
+    }
+
+}
+
+.card-line{
+    width: 100%;
+    height: 1px;
+
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+    -moz-transform: scaleY(0.4);
+    -o-transform: scaleY(0.4);
+
+    background-color: #dcdcdc;
+}
+
+.card-item{
+    position: relative;
+
+    height: rem(372);
+    margin-left: rem(48);
+
+    background-color: white;
+
+    .card-item-line{
+        @extend .card-line;
+    }
+
+    .card-img{
+        @extend .center;
+
+        width: rem(360);
+        height: rem(228);
+        background-size: 100% 100%;
+        border-radius: 3px;
+        box-shadow: 0 2px 18px rgba(0,0,0,.2);
+    }
+
+    .card-tip{
+
+        .tip-content{
+            position: absolute;
+            top: rem(29);
+
+            border-color: transparent;
+            padding: rem(1) rem(15);
+            height: rem(60);
+
+            @include PingFangSC-Medium;
+            font-size: rem(36);
+            line-height: rem(67);
+            text-align: center;
+
+            background-color: #3384FF;
+            color: white;           
+        }
+
+        .tip-symbol{
+            position: absolute;
+            top: rem(78);
+
+            width: 0;
+            height: 0;
+            border-left: 0 solid transparent;
+            border-right: rem(30) solid transparent;
+            border-top: rem(30) solid #3384FF;
+        }
+    }
+
+    .info{
+        position: absolute;
+        top: rem(70);
+        left: 41%;
+        
+        height: rem(228);
+
+        @media only screen and (min-width: 0px) and (max-width: 320px) {
+            left: 45%;
+        }
+
+        .name{
+            @include PingFangSC-Semibold;
+            width: rem(600);
+
+            font-size: rem(48);
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            color: #333333;
+
+            font-weight: bold;
+
+            @media only screen and (min-width: 0px) and (max-width: 320px) {
+                width: rem(400);
+            }
+        }
+    
+        .descr{
+            @include PingFangSC-Regular;
+            width: rem(600);
+
+            font-size: rem(39);
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+            color: #808080;
+
+            @media only screen and (min-width: 0px) and (max-width: 320px) {
+                width: rem(400);
+            }
+        }
+        
+        .tags{
+            margin-top: rem(48);
+            width: rem(600);
+            height: rem(54);
+            overflow: hidden;
+
+            @media only screen and (min-width: 0px) and (max-width: 320px) {
+                width: rem(480);
+            }
+
+            .tags-item{
+                position: relative;
+                margin-right: rem(15); 
+                padding: 0 rem(15);
+                height: rem(54);
+                float: left;
+                
+                @include PingFangSC-Regular;
+                font-size: rem(33);
+                text-align: center;
+                line-height: rem(61);
+
+                color: #5287E2;       
+                
+                @media only screen and (min-width: 0px) and (max-width: 320px) {
+                    line-height: rem(54);
+                }
+            }
+
+            .tags-item::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 200%;
+                height: 200%;
+                border: 1px solid #5287e2;
+                border-radius: 2px;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+
+                transform: scale(0.5);
+                -webkit-transform: scale(0.5);
+                transform-origin: 0 0;
+                -webkit-transform-origin: 0 0;
+            }
+
+            .tags-item-ios{
+                @extend .tags-item;
+                line-height: rem(54);
+            }
+
+            .tags-item-ios::before{
+                @extend .tags-item::before;
+            }
+           
+        }
+
+    }
+
+}
+
+.card-more{
+    width: 100%;
+    height: rem(150);
+
+    @include PingFangSC-Regular;
+    font-size: rem(48);
+    color: #5287E2;    
+    text-align: center;
+    line-height: rem(150);
+}
+
+.card-bottom{
+    width: 100%;
+    height: rem(36);
+
+    background-color: #f5f6f7;
+}

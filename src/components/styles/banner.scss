@@ -1,0 +1,56 @@
+@import "./../../common/styles/unit";
+@import "./../../common/styles/font";
+
+.banner-bg{
+    position: relative;
+    background-color: white;
+    height: rem(280);
+
+    @media only screen and (min-width: 0px) and (max-width: 320px) {
+        height: rem(218);
+    }
+
+    @media only screen and (min-width: 321px) and (max-width: 369px) {
+        height: rem(260);
+    }
+
+    @media only screen and (min-width: 370px) and (max-width: 380px) {
+        height: rem(260);
+    }
+
+    @media only screen and (min-width: 381px) and (max-width: 430px) {
+        height: rem(280);
+    }
+
+    .banner-img{
+        width: 100%;
+    }
+    
+}
+
+.bar-box{
+    background-color: transparent;
+    width: 100%;
+    height: rem(6);
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-content: center;
+        
+    .bar-item{
+        margin-left: rem(6);
+        margin-right: rem(6);
+        width: rem(36);
+        height: 100%;
+        float: left;
+
+        background-color: #DCDCDC;
+        }
+    
+    .bar-item-select{
+        @extend .bar-item;
+        background-color: #8A8A8A;;
+    }
+}
+
+
