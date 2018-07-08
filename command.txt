@@ -1,3 +1,7 @@
+vue init webpack-simple credit-card
+
+// 安装vuex
+npm install vuex --save
+
 npm run dev
 
-vue init webpack-simple first-vue

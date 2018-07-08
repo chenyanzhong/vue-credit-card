@@ -9,7 +9,7 @@
 
 <script>
 import "./components/styles/index.scss";
-import { testData } from "./modules/const.js";
+import { mapState, mapActions } from "vuex";
 
 import RecommendIcon from "./components/recommend-icon";
 import Banner from "./components/banner";
@@ -24,26 +24,12 @@ export default {
         TofuBlock,
         CardList
     },
-    data() {
-        return {
-            data: testData
-        };
-    },
-    computed: {
-        icons() {
-            return this.data.icon ? this.data.icon : [];
-        },
-        banners() {
-            return this.data.banner ? this.data.banner : [];
-        },
-        squares() {
-            return this.data.square ? this.data.square : [];
-        },
-        creditCards() {
-            return this.data.creditCards ? this.data.creditCards : [];
-        }
-    },
-    methods: {}
+    computed: mapState({
+        icons: state => state.home.icons,
+        banners: state => state.home.banners,
+        squares: state => state.home.squares,
+        creditCards: state => state.home.creditCards
+    }),
 };
 </script>
 
