@@ -21,8 +21,8 @@
 <script>
 import "./styles/banner.scss";
 
-import FSwiper from "./../common/swiper/fswiper.vue";
-import FSwiperSlide from "./../common/swiper/fswiper-slide.vue";
+import FSwiper from "./../../../common/swiper/fswiper.vue";
+import FSwiperSlide from "./../../../common/swiper/fswiper-slide.vue";
 
 export default {
     name: "Banner",
