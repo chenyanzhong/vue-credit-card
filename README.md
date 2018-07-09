@@ -1,6 +1,6 @@
 # vue-credit-card
 
-A Vue.js project
+信用卡工程项目,用vue,vuex,vue-router作为基础构建
 
 ``` bash
 # install dependencies
