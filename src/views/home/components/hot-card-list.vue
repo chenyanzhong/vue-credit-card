@@ -42,7 +42,6 @@
 
 <script>
 import "./styles/hot-card-list.scss";
-import { icon } from "./../modules/const.js";
 
 export default {
     name: "RecommendIcon",
